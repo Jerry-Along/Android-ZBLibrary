@@ -17,11 +17,14 @@ package zuo.biao.library.base;
 import zuo.biao.library.R;
 import zuo.biao.library.interfaces.ViewPresenter;
 import zuo.biao.library.util.StringUtil;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 /**基础带标签的FragmentActivity
  * @author Lemon
@@ -42,6 +45,7 @@ implements ViewPresenter {
 	 *       2.在子类onCreate中super.onCreate(savedInstanceState);
 	 *       initView();initData();initEvent();
 	 */
+	@SuppressLint("MissingSuperCall")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		onCreate(savedInstanceState, 0);
@@ -55,7 +59,6 @@ implements ViewPresenter {
 	 *       initView();initData();initEvent();
 	 */
 	protected final void onCreate(Bundle savedInstanceState, int layoutResID) {
-		super.onCreate(savedInstanceState);
 		super.setContentView(layoutResID <= 0 ? R.layout.base_view_bottom_window : layoutResID);
 	}
 

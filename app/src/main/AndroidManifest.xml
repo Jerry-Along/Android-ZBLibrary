@@ -49,8 +49,8 @@
         <activity android:name=".DEMO.DemoThreadPoolActivity"></activity>
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="zblibrary.demo.fileProvider"
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

@@ -17,8 +17,9 @@ package zblibrary.demo.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
+
+import androidx.fragment.app.Fragment;
 
 import zblibrary.demo.DEMO.DemoTabFragment;
 import zblibrary.demo.R;

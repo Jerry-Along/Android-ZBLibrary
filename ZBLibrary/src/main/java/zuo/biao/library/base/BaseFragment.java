@@ -17,8 +17,10 @@ package zuo.biao.library.base;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -71,8 +73,7 @@ public abstract class BaseFragment extends Fragment implements FragmentPresenter
 	 * @must 在非abstract子类的onCreateView中super.onCreateView且return view;
 	 */
 	@Override
-	@Nullable
-	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
+	public View onCreateView(@Nullable LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
 		context = (BaseActivity) getActivity();
 		isAlive = true;
 

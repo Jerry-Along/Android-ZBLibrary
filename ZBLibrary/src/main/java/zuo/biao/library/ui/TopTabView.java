@@ -22,13 +22,14 @@ import zuo.biao.library.util.StringUtil;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.res.Resources;
-import android.support.annotation.LayoutRes;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.LayoutRes;
 
 /**自定义顶栏切换标签View
  * @warn 复制到其它工程内使用时务必修改import R文件路径为所在应用包名

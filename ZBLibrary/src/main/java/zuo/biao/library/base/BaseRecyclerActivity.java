@@ -14,14 +14,13 @@ limitations under the License.*/
 
 package zuo.biao.library.base;
 
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
-import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -62,7 +61,7 @@ import zuo.biao.library.util.StringUtil;
  *       4.setList把列表数据绑定到adapter <br />
  *   </pre>
  */
-public abstract class BaseRecyclerActivity<T, VH extends ViewHolder, A extends Adapter<VH>>
+public abstract class BaseRecyclerActivity<T, VH extends RecyclerView.ViewHolder, A extends RecyclerView.Adapter<VH>>
 		extends BaseActivity implements OnItemClickListener, OnItemLongClickListener {
 	private static final String TAG = "BaseRecyclerActivity";
 

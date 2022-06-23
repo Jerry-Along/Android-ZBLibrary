@@ -59,7 +59,6 @@ public class DataManager {
 
 
 	/**判断是否为当前用户
-	 * @param context
 	 * @param userId
 	 * @return
 	 */
@@ -68,7 +67,6 @@ public class DataManager {
 	}
 
 	/**获取当前用户id
-	 * @param context
 	 * @return
 	 */
 	public long getCurrentUserId() {
@@ -77,7 +75,6 @@ public class DataManager {
 	}
 
 	/**获取当前用户的手机号
-	 * @param context
 	 * @return
 	 */
 	public String getCurrentUserPhone() {
@@ -85,7 +82,6 @@ public class DataManager {
 		return user == null ? "" : user.getPhone();
 	}
 	/**获取当前用户
-	 * @param context
 	 * @return
 	 */
 	public User getCurrentUser() {
@@ -95,7 +91,6 @@ public class DataManager {
 
 
 	/**获取最后一次登录的用户的手机号
-	 * @param context
 	 * @return
 	 */
 	public String getLastUserPhone() {
@@ -104,7 +99,6 @@ public class DataManager {
 	}
 
 	/**获取最后一次登录的用户
-	 * @param context
 	 * @return
 	 */
 	public User getLastUser() {
@@ -113,7 +107,6 @@ public class DataManager {
 	}
 
 	/**获取用户
-	 * @param context
 	 * @param userId
 	 * @return
 	 */
@@ -129,7 +122,6 @@ public class DataManager {
 
 
 	/**保存当前用户,只在登录或注销时调用
-	 * @param context
 	 * @param user  user == null >> user = new User();
 	 */
 	public void saveCurrentUser(User user) {
@@ -151,14 +143,12 @@ public class DataManager {
 	}
 
 	/**保存用户
-	 * @param context
 	 * @param user
 	 */
 	public void saveUser(User user) {
 		saveUser(context.getSharedPreferences(PATH_USER, Context.MODE_PRIVATE), user);
 	}
 	/**保存用户
-	 * @param context
 	 * @param sdf
 	 * @param user
 	 */
@@ -173,7 +163,6 @@ public class DataManager {
 	}
 
 	/**删除用户
-	 * @param context
 	 * @param sdf
 	 */
 	public void removeUser(SharedPreferences sdf, long userId) {
@@ -185,7 +174,6 @@ public class DataManager {
 	}
 
 	/**设置当前用户手机号
-	 * @param context
 	 * @param phone
 	 */
 	public void setCurrentUserPhone(String phone) {
@@ -198,7 +186,6 @@ public class DataManager {
 	}
 
 	/**设置当前用户姓名
-	 * @param context
 	 * @param name
 	 */
 	public void setCurrentUserName(String name) {
